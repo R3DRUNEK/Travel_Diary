@@ -1,4 +1,9 @@
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 ## mysql
+
 development:
   adapter: mysql2
   encoding: utf8
@@ -7,3 +12,9 @@ development:
   password:
   host: 127.0.0.1
   port: 3306
+
+production:
+  <<: *default
+  database: traver_diary_production
+  username: travel_diary
+  password: <%= ENV['TRAVEL_DIARY_DATABASE_PASSWORD'] %>
