@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.sign-up-wrapper {
+  display:flex;
+  height: 100vh;
+}
+
+.sign-up-left-logo {
+  background-image: image-url("../assets/aircraftsignup.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-basis:70%;
+  min-height: 100%;
+}
+.sign-up {
+  text-decoration: none solid rgb(51, 51, 51);
+  flex-basis:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 17px;
+}
+.form-group, .actions {
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction: column;
+  color: #666666;
+}
+
+.sign-up .form-group input {
+ max-width: 150px;
+  border-width: 0;
+  border-bottom: 1px solid black;
+  box-shadow:none;
+}
+label {
+  font-weight: initial;
+}
+.sign-up-button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: cadetblue;
+  border-width: 0;
+  padding: 10px;
+  color:black;
+}
+
+@media (max-width: 750px) {
+  .sign-up-wrapper {
+    flex-direction: column;
+  }
+  .sign-up-left-logo {
+    order: 2;
+    min-height: 350px;
+
+  }
+  .sign-up {
+    order: 1;
+  }
+}
